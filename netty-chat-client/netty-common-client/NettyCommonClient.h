@@ -1,11 +1,3 @@
-//
-//  DFNettyChatClient.h
-//  netty-chat-client
-//
-//  Created by Allen Zhong on 15/3/15.
-//  Copyright (c) 2015年 Datafans Inc. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 #import "GCDAsyncSocket.h"
 
@@ -15,9 +7,6 @@ typedef NS_ENUM(NSUInteger, CONNECTION_STATUS){
 
 #define HEARTBEAT_TIMEOUT_INTERVAL 60
 #define HEARTBEAT_SEND_INTERVAL 5
-
-
-
 
 
 @interface NettyCommonClient : NSObject <GCDAsyncSocketDelegate>

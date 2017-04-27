@@ -1,11 +1,3 @@
-//
-//  DFNettyChatClient.m
-//  netty-chat-client
-//
-//  Created by Allen Zhong on 15/3/15.
-//  Copyright (c) 2015年 Datafans Inc. All rights reserved.
-//
-
 #import "NettyCommonClient.h"
 #import "Reachability.h"
 
@@ -14,8 +6,6 @@
 #define TAG_BODY 1002
 
 @implementation NettyCommonClient
-
-
 
 - (instancetype)init
 {
@@ -264,9 +254,7 @@
 
 -(NSData *) getLoginData
 {
-    
     return nil;
-    
 }
 
 

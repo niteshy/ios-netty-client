@@ -1,11 +1,3 @@
-//
-//  ViewController.m
-//  netty-chat-client
-//
-//  Created by Allen Zhong on 15/3/15.
-//  Copyright (c) 2015年 Datafans Inc. All rights reserved.
-//
-
 #import "ViewController.h"
 #import "DFNettyChatClient.h"
 #import "DataPackage.h"
@@ -81,17 +73,14 @@
     }
     
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-//    [dic setObject:@"10000" forKey:@"sid"];
-//    [dic setObject:@"10000" forKey:@"rid"];
     [dic setObject:msg forKey:@"msg"];
     
     NSData *content = [[self dataTOjsonString:dic] dataUsingEncoding:NSUTF8StringEncoding];
     
     DataPackage *msgPkg = [DataPackage simpleMsgPackage];
     msgPkg.content = content;
-    NSLog(@"sizeof msg = %ld", content.length);
-//    msgPkg.msgId = 1234567;
-    
+//    NSLog(@"sizeof msg = %ld", content.length);
+
     [[DFNettyChatClient sharedInstance] write:[DataPackage encode:msgPkg]];
 }
 
@@ -127,16 +116,16 @@
     switch (status) {
             
         case CLOSED:
-            self.title = @"未连接";
+            self.title = @"";
             break;
         case CONNECTING:
-            self.title = @"连接中...";
+            self.title = @"Connecting...";
             break;
         case CLOSING:
-            self.title = @"关闭中...";
+            self.title = @"Closing...";
             break;
         case RUNNING:
-            self.title = @"消息";
+            self.title = @"Running";
             break;
         default:
             break;
@@ -152,12 +141,10 @@
 -(void) update
 {
     [[NSNotificationCenter defaultCenter] postNotificationName:@"kkk11" object:nil];
-    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    
 }
 
 @end

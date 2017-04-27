@@ -1,11 +1,3 @@
-//
-//  DFNettyChatClient.m
-//  netty-chat-client
-//
-//  Created by Allen Zhong on 15/3/18.
-//  Copyright (c) 2015年 Datafans Inc. All rights reserved.
-//
-
 #import "DFNettyChatClient.h"
 #import "DataPackage.h"
 
@@ -23,9 +15,6 @@ static DFNettyChatClient *_client=nil;
     return _client;
 }
 
-
-
-
 -(NSData *) getHeartbeatData
 {
     DataPackage *pkg = [DataPackage simpleMsgPackage];
@@ -33,21 +22,6 @@ static DFNettyChatClient *_client=nil;
     pkg.content = content;
     return [DataPackage encode:pkg];
 }
-//
-//-(NSData *) getLoginData
-//{
-//    DataPackage *pkg = [DataPackage loginPackage];
-//    
-//    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-//    [dic setObject:@"10000" forKey:@"user_id"];
-//    NSData *content = [[self dataTOjsonString:dic] dataUsingEncoding:NSUTF8StringEncoding];
-//    pkg.content = content;
-//    
-//    return [DataPackage encode:pkg];
-//
-//    
-//}
-
 
 -(NSString*)dataTOjsonString:(id)object
 {

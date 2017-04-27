@@ -114,7 +114,7 @@
 		115394951AB9A9B20054D77C /* netty-chat-client */ = {
 			isa = PBXGroup;
 			children = (
-				18244CB11AC31A97003A7EA9 /* netty-common-client */,
+				18244CB11AC31A97003A7EA9 /* protocol */,
 				115394DF1AB9AFD70054D77C /* DataPackage.h */,
 				115394E01AB9AFD70054D77C /* DataPackage.m */,
 				1153949A1AB9A9B20054D77C /* AppDelegate.h */,
@@ -140,7 +140,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		18244CB11AC31A97003A7EA9 /* netty-common-client */ = {
+		18244CB11AC31A97003A7EA9 /* protocol */ = {
 			isa = PBXGroup;
 			children = (
 				6D70BA6F1EB1E4640073804F /* NettyCommonClient.h */,
@@ -150,7 +150,7 @@
 				6D70BA731EB1E4640073804F /* Reachability.h */,
 				6D70BA741EB1E4640073804F /* Reachability.m */,
 			);
-			name = "netty-common-client";
+			name = protocol;
 			path = "../../netty-common-client-objc/netty-common-client";
 			sourceTree = "<group>";
 		};
